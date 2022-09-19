@@ -64,7 +64,7 @@ jobs:
         if: ${{ !env.ACT }}
         uses: actions/upload-artifact@v3
         with:
-          name: Aufgabenguide
+          name: LaTeX-Workshop Folien
           path: "*.pdf"
           if-no-files-found: error
       
@@ -75,7 +75,7 @@ jobs:
 
       #9 create a release
       - name: Create a release
-        if: ${{ github.ref == 'refs/heads/master' && !env.ACT && github.repository == 'Ofahrt-2022/LaTeX-Workshop' }}
+        if: ${{ github.ref == 'refs/heads/main' && !env.ACT && github.repository == 'Ofahrt-2022/LaTeX-Workshop' }}
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
