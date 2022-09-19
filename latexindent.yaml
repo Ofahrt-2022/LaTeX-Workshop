@@ -1,4 +1,4 @@
-# Formatting Settings for the AuD-Sheets by Ruben Deisenroth
+# Formatting Settings by Ruben Deisenroth
 #
 # based on defaultSettings.yaml for latexindent.pl, version 3.15, 2022-01-21
 #                      a script that aims to
@@ -137,7 +137,7 @@ lookForPreamble:
 preambleCommandsBeforeEnvironments: 0
 
 # default value of indentation
-defaultIndent: "\t"
+defaultIndent: "    "
 
 # remove trailing whitespace from all lines
 removeTrailingWhitespace:
@@ -553,11 +553,11 @@ modifyLineBreaks:
         BodyStartsOnOwnLine: 1
         EndStartsOnOwnLine: 1
         EndFinishesWithLineBreak: 1
-        equation*:
-            BeginStartsOnOwnLine: 1
-            BodyStartsOnOwnLine: 1
-            EndStartsOnOwnLine: 1
-            EndFinishesWithLineBreak: 1
+        # equation*:
+        #     BeginStartsOnOwnLine: 1
+        #     BodyStartsOnOwnLine: 1
+        #     EndStartsOnOwnLine: 1
+        #     EndFinishesWithLineBreak: 1
     ifElseFi:
         IfStartsOnOwnLine: 1
         BodyStartsOnOwnLine: 1
