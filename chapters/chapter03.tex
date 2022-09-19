@@ -42,12 +42,16 @@
     \begin{frame}[fragile]
         \slidehead{}
         \begin{itemize}
+            \item Zeichen mit besonderer Bedeutung: \verb+\+, \verb+&+, \verb+#+, \verb+$+, \verb+%+, \verb+~+, \verb+^+, \verb+_+, \verb+{+, \verb+}+, \verb+[+ und \verb+]+
             \item Kommandos beginnen mit einem Backslask: \verb+\+
             \item Kommandonamen enthalten keine Zahlen, Leerzeichen und Sonderzeichen
             \item Argumente werden in geschweiften Klammern angegeben \verb+{}+
             \item Optionale Argumente werden in eckigen Klammern angegeben \verb+[]+
             \item Environments werden mit \verb+\begin{<name>}+ und \verb+\end{<name>}+ angegeben
-            \item Kommentare werden mit einem \verb+%+ beginnen
+            \item Kommentare beginnen mit einem \verb+%+
+            \item Parameter werden mit \verb+#+ angegeben und gehen von 1-9\begin{itemize}
+                    \item Dabei wird für innere Argumente die Anzahl der \verb+#+ verdoppelt (z.B. \verb+#1+, \verb+##1+, \verb+####1+)
+                \end{itemize}
         \end{itemize}
     \end{frame}
     \subsection{Aufbau eines Dokumentes}\label{2.1}\label{2.1}
@@ -60,10 +64,8 @@
             \begin{column}{.5\textwidth}
                 \centering
                 \colorbox{white}{%
-                    \begingroup
                     \color{black}
                     \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{\codeDir/minimal}
-                    \endgroup
                 }
             \end{column}
         \end{columns}
@@ -72,17 +74,40 @@
         \slidehead{}
         \begin{columns}[c]
             \begin{column}{.5\textwidth}
-                \inputCode[]{minted language=latex,title=\codeBlockTitle{Minimales \LaTeX-Dokument}}{\codeDir/minimal-documented.tex}
+                \inputCode[]{minted language=latex,title=\codeBlockTitle{Minimales \LaTeX-Dokument}}{\codeDir/minimal-lipsum.tex}
             \end{column}%
             \begin{column}{.5\textwidth}
                 \centering
                 \colorbox{white}{%
-                    \begingroup
                     \color{black}
-                    \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{\codeDir/minimal-documented}
-                    \endgroup
+                    \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{\codeDir/minimal-lipsum}
                 }
             \end{column}
         \end{columns}
     \end{frame}
+    \subsection{Overleaf-Instanz}\label{2.2}\label{2.2}
+    \begin{frame}
+        \slidehead{}
+        \begin{itemize}
+            \item Ofahrt-Intern: \url{latex.ofahrt2022.de}
+            \item TU-Darmstadt: \url{sharelatex01.ca.hrz.tu-darmstadt.de/}
+        \end{itemize}
+        
+    \end{frame}
+    % \subsection{Formeln}
+    % \begin{frame}[fragile]
+    %     \slidehead{}
+    %     \begin{columns}[c]
+    %         \begin{column}{.5\textwidth}
+                
+    %         \end{column}%
+    %         \begin{column}{.5\textwidth}
+    %             \centering
+    %             \colorbox{white}{%
+    %                 \color{black}
+    %                 \includegraphics[width=\textwidth,height=5cm,keepaspectratio]{\codeDir/minimal-lipsum}
+    %             }
+    %         \end{column}
+    %     \end{columns}
+    % \end{frame}
 \end{document}
